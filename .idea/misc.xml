@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/password_foreground.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/drawable/user_foreground.xml" value="0.21510416666666668" />
+        <entry key="app/src/main/res/layout/activity_adminansactivity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_admintickets.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_clientansactivity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_loginactivity.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.19895833333333332" />
+        <entry key="app/src/main/res/layout/activity_manualform.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_mytickets.xml" value="0.19589743589743588" />
+        <entry key="app/src/main/res/layout/activity_registration.xml" value="0.19589743589743588" />
+        <entry key="app/src/main/res/layout/botmessages.xml" value="0.19895833333333332" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.19589743589743588" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_toolbar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/messagelayout.xml" value="0.19895833333333332" />
+        <entry key="app/src/main/res/layout/mybookings.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
