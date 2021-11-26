@@ -19,7 +19,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:src="@drawable/ic_bot_foreground" />
+            android:src="@drawable/bot_foreground" />
 
         <!--below widget is for
             displaying message of bot-->

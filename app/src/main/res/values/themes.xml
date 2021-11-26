@@ -11,30 +11,33 @@
         <item name="colorOnSecondary">@color/black</item>
 
 
-<!--        <style name="ToolbarTheme" parent="Theme.Design.Light.NoActionBar">-->
-<!--            <item name="android:textColorPrimary">@color/white</item>-->
-<!--            <item name="android:textColorSecondary">@color/white</item>-->
+        <!--        <style name="ToolbarTheme" parent="Theme.Design.Light.NoActionBar">-->
+        <!--            <item name="android:textColorPrimary">@color/white</item>-->
+        <!--            <item name="android:textColorSecondary">@color/white</item>-->
 
-<!--            <item name="android:textColor">@color/white</item>-->
-<!--            <item name="colorControlNormal">@color/white</item>-->
-<!--        </style>-->
+        <!--            <item name="android:textColor">@color/white</item>-->
+        <!--            <item name="colorControlNormal">@color/white</item>-->
+        <!--        </style>-->
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="Theme.Chatbox.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="Theme.Chatbox.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="Theme.Chatbox.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
     <style name="ToolbarTheme" parent="Theme.Design.Light.NoActionBar">
-             <item name="android:textColorPrimary">@color/white</item>
-               <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
 
-               <item name="android:textColor">@color/white</item>
-               <item name="colorControlNormal">@color/white</item>
-          </style>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
 </resources>

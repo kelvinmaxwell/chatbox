@@ -54,41 +54,9 @@ public class admintickets extends AppCompatActivity implements mybookingsadapter
         recyclerView.setItemAnimator(new DefaultItemAnimator());
           recyclerView.setAdapter(mAdapter);
 
-        register=findViewById(R.id.register);
-        bot=findViewById(R.id.bot);
-        admin=findViewById(R.id.admin);
-        tickets=findViewById(R.id.tickets);
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(admintickets.this,registration.class);
-                startActivity(i);
-            }
-        });
 
-        bot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(admintickets.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
-        admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(admintickets.this,admintickets.class);
-                startActivity(i);
-            }
-        });
 
-        tickets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(admintickets.this,mytickets.class);
-                startActivity(i);
-            }
-        });
 
         fetchContacts();
 

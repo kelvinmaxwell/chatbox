@@ -11,7 +11,10 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,11 +31,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Manualform extends AppCompatActivity {
-    public TextView descrption, email,register,bot,admin,tickets;
+    public TextView descrption, email,name,subject;
+    public Spinner issuetype,priority;
     public Button submit;
     public SharedPreferences sharedpreferences;
     public static final String MyPREFERENCES = "MyPrefs" ;
+    String[] country = { "India", "USA", "China", "Japan", "Other"};
+    String[] country2 = { "India", "USA", "China", "Japan", "Other"};
 
+    String[] isst={ "SLS issue", "SiS issue", "Submission issues(Assignments,projects)", "Online classes issues", "Log in to University site issue","other"};
+    String[] prioritys={ "HIGH", "MEDIUM", "LOW"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,17 +49,55 @@ public class Manualform extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "manual system", Toast.LENGTH_SHORT).show();
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        register=findViewById(R.id.register);
-        bot=findViewById(R.id.bot);
-        admin=findViewById(R.id.admin);
-        tickets=findViewById(R.id.tickets);
+        myToolbar.setTitle("Manual form");
 
-        register.setText("Register");
+        issuetype=findViewById(R.id.spinner);
+        priority=findViewById(R.id.spinner2);
 
 
+
+        //Creating the ArrayAdapter instance having the country list
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,isst);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Setting the ArrayAdapter data on the Spinner
+        issuetype.setAdapter(aa);
+
+
+        ArrayAdapter arr2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,prioritys);
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        priority.setAdapter(arr2);
+
+
+        issuetype.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+        priority.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
+
+        name=findViewById(R.id.name);
+        subject=findViewById(R.id.subject);
 
         descrption=findViewById(R.id.textView4);
         email=findViewById(R.id.textView5);
+
         sharedpreferences = getSharedPreferences(MyPREFERENCES,MODE_PRIVATE);
 
         submit=findViewById(R.id.button);
@@ -66,36 +112,7 @@ public class Manualform extends AppCompatActivity {
             }
         });
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(Manualform.this,registration.class);
-                startActivity(i);
-            }
-        });
 
-        bot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(Manualform.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
-        admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(Manualform.this,admintickets.class);
-                startActivity(i);
-            }
-        });
-
-        tickets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(Manualform.this,mytickets.class);
-                startActivity(i);
-            }
-        });
     }
 
 
@@ -153,7 +170,7 @@ public class Manualform extends AppCompatActivity {
                 Map<String,String> params = new HashMap<String,String>();
 
 
-                String sql = "INSERT INTO `transactions`(`number`, `description`,`user`) VALUES ('"+email.getText().toString()+"','"+descrption.getText().toString()+"','"+sharedpreferences.getString("email",null)+"') ";
+                String sql = "INSERT INTO `transactions`(`number`, `description`,`user`,`name`,`subject`,`issuetype`,`priority`) VALUES ('"+email.getText().toString()+"','"+descrption.getText().toString()+"','"+sharedpreferences.getString("email",null)+"','"+name.getText().toString()+"','"+subject.getText().toString()+"','"+issuetype.getSelectedItem().toString()+"','"+priority.getSelectedItem().toString()+"') ";
 
                 params.put("action", "insert_data");
                 params.put("database", getResources().getString(R.string.database));

@@ -57,12 +57,8 @@ public String id;
          });
 
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
-        register=findViewById(R.id.register);
-        bot=findViewById(R.id.bot);
-        admin=findViewById(R.id.admin);
-        tickets=findViewById(R.id.tickets);
+        myToolbar.setTitle("Admin");
 
-        register.setText("Register");
 
 
 
@@ -72,36 +68,6 @@ public String id;
 
 
 
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(adminansactivity.this,registration.class);
-                startActivity(i);
-            }
-        });
-
-        bot.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(adminansactivity.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
-        admin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(adminansactivity.this,admintickets.class);
-                startActivity(i);
-            }
-        });
-
-        tickets.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i=new Intent(adminansactivity.this,mytickets.class);
-                startActivity(i);
-            }
-        });
 
         selectitem();
 

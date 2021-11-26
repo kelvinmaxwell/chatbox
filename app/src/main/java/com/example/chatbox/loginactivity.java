@@ -121,7 +121,7 @@ Button loginbtn;
 
 
 
-                                                Intent k = new Intent(loginactivity.this, Manualform.class);
+                                                Intent k = new Intent(loginactivity.this, menuactivity.class);
                                                 startActivity(k);
 
 
