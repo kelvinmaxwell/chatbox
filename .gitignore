@@ -13,3 +13,16 @@
 .externalNativeBuild
 .cxx
 local.properties
+/NetBeansProjects/mavenproject1/target/
+/NetBeansProjects/sortingassin/nbproject/private/
+/NetBeansProjects/sortingassin/build/
+/NetBeansProjects/sortingassin/dist/
+/NetBeansProjects/gui21lec/nbproject/private/
+/NetBeansProjects/gui21lec/build/
+/NetBeansProjects/hellowrod/nbproject/private/
+/NetBeansProjects/helloworl/nbproject/private/
+/NetBeansProjects/helloworl/build/
+/NetBeansProjects/helloworl/dist/
+/NetBeansProjects/JavaApplication5/nbproject/private/
+/NetBeansProjects/JavaApplication5/build/
+/NetBeansProjects/JavaApplication5/dist/

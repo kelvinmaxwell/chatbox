@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">chatbox</string>
 
-    <string name="url">http:192.168.1.102:8080/chatbot/chatbot.php</string>
+    <string name="url">http:192.168.1.34/chatbot/chatbot.php</string>
     <!--    http://2486-80-240-202-21.ngrok.io-->
     <!--    192.168.1.106-->
     <!--    http://192.168.1.106:8080-->
